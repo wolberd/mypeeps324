@@ -43,6 +43,35 @@
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <!-- Firebase SDK -->
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+        import { getFirestore, collection, addDoc, getDocs, deleteDoc, doc } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
+
+        // Your Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyDaTkbW0WWe4L9e-01g4HPlpk6Neh2s8P0",
+            authDomain: "peopleapp-5143a.firebaseapp.com",
+            projectId: "peopleapp-5143a",
+            storageBucket: "peopleapp-5143a.firebasestorage.app",
+            messagingSenderId: "49774629896",
+            appId: "1:49774629896:web:ee3e89dba171cabc282dbd"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const firestoreDb = getFirestore(app);
+
+        // Make Firebase functions available globally
+        window.db = firestoreDb;
+        window.collection = collection;
+        window.addDoc = addDoc;
+        window.getDocs = getDocs;
+        window.deleteDoc = deleteDoc;
+        window.doc = doc;
+    </script>
+    
+    <script src="script.js" type="module"></script>
 </body>
 </html> 
