@@ -1,17 +1,3 @@
-// Firebase configuration
-const firebaseConfig = {
-    apiKey: "AIzaSyDaTkbW0WWe4L9e-01g4HPlpk6Neh2s8P0",
-    authDomain: "peopleapp-5143a.firebaseapp.com",
-    projectId: "peopleapp-5143a",
-    storageBucket: "peopleapp-5143a.firebasestorage.app",
-    messagingSenderId: "49774629896",
-    appId: "1:49774629896:web:ee3e89dba171cabc282dbd"
-};
-
-// Initialize Firebase
-firebase.initializeApp(firebaseConfig);
-const db = firebase.firestore();
-
 // DOM Elements
 const addPersonBtn = document.getElementById('addPersonBtn');
 const modal = document.getElementById('addPersonModal');

@@ -59,19 +59,23 @@
             appId: "1:49774629896:web:ee3e89dba171cabc282dbd"
         };
 
-        // Initialize Firebase
+        // Initialize Firebase and make it available globally
         const app = initializeApp(firebaseConfig);
         const firestoreDb = getFirestore(app);
 
-        // Make Firebase functions available globally
+        // Make Firebase functions and db available globally
         window.db = firestoreDb;
         window.collection = collection;
         window.addDoc = addDoc;
         window.getDocs = getDocs;
         window.deleteDoc = deleteDoc;
         window.doc = doc;
+
+        // Load the main script after Firebase is initialized
+        const script = document.createElement('script');
+        script.type = 'module';
+        script.src = 'script.js';
+        document.body.appendChild(script);
     </script>
-    
-    <script src="script.js" type="module"></script>
 </body>
 </html> 
