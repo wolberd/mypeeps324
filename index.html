@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Persons Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Research Persons Tracker</h1>
+            <button id="addPersonBtn" class="add-btn">+</button>
+        </header>
+        
+        <main>
+            <div id="personsList" class="persons-list">
+                <!-- Persons will be added here dynamically -->
+            </div>
+        </main>
+    </div>
+
+    <!-- Modal for adding new person -->
+    <div id="addPersonModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Add New Person</h2>
+            <form id="addPersonForm">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="role">Role/Title:</label>
+                    <input type="text" id="role">
+                </div>
+                <div class="form-group">
+                    <label for="notes">Notes:</label>
+                    <textarea id="notes" rows="4"></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Add Person</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
